@@ -1,0 +1,27 @@
+.aboutContainer{
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(233, 229, 229); */
+    background-image: url("../assets/aboutImage.jpg");
+    background-size: cover;       /* or 'contain' depending on your goal */
+    background-position: top;  /* center the image */
+}
+
+.aboutContent{
+    width: 50%;
+    margin: 0 0 0 40px;
+    padding: 10px;
+}
+
+.aboutContent:hover{
+    background-color: rgb(256, 256, 256, 0.7);
+    transition: 400ms;
+    border-radius: 5px;
+    scale: 1.05;
+    
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

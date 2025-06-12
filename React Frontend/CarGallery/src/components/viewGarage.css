@@ -1,0 +1,103 @@
+.mainBox{
+    min-height: 100vh;
+    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: grey; */
+    background-image: url("../assets/viewGarage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.myGarageContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,32%));
+    justify-content: space-between;
+    padding: 1%;
+    /* background-color: grey; */
+}
+
+.myCarDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: rgba(102, 133, 154, 0.9);
+    color: rgb(253, 253, 253);
+    padding: 10px;
+    border-radius: 10px
+
+}
+
+.mainCarDetails{
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteButton>button{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    text-decoration: none;
+    border: 0;
+    background-color: transparent;
+}
+
+.deleteButton>button::before{
+    content: "";
+    background-image: url("../assets/trashIcon.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    pointer-events: none;
+}
+
+.miscDetails{
+    display: flex;
+    gap: 10px;
+}
+
+.carDisplacement::before{
+    content: "";
+  display: inline-block;
+  width: 20px; /* your desired size */
+  height: 20px;
+  background-image: url("../assets/displacementLogo.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: grayscale(1);
+}
+
+.carfuelType::before{
+    content: "";
+  display: inline-block;
+  width: 25px; /* your desired size */
+  height: 25px;
+  background-image: url("../assets/fuelLogo.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: grayscale(1);
+}
+
+.carPrice::before{
+    content: "";
+  display: inline-block;
+  width: 25px; /* your desired size */
+  height: 25px;
+  background-image: url("../assets/priceLogo.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: grayscale(1);
+}

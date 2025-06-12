@@ -1,0 +1,46 @@
+
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mainContent{
+    height: 100dvh;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(2,30%);
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: lightblue;
+    background-image: url("../assets/createGarageImage.jpg");
+    background-position: center ;
+}
+
+.addCarButton, .viewGarageButton{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(248, 239, 235, 0.4);
+    border-radius: 30px;
+    backdrop-filter: blur(3px);
+    color: rgb(80, 72, 72);
+}
+
+.addCarButton:hover , .viewGarageButton:hover{
+    scale: 1.05;
+    backdrop-filter: blur(7px);
+    transition: 400ms;
+}

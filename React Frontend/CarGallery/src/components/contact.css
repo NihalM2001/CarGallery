@@ -1,0 +1,60 @@
+.contactDetails{
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-image: url("../assets/contactImage.jpg");
+    background-position: 62% 23%;
+}
+
+.header{
+    color: white;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(39, 34, 34, 0.9);
+    padding: 0 20px 0 10px;
+    border-radius: 6px 0 0 6px;
+}
+
+.contactForm{
+    background-color: white;
+    width: 40%;
+    height: 50%;
+    /* border: 1px solid black; */
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 6px 6px 0;
+}
+
+.formElements{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 20px 0;
+}
+
+.elementStyling{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.buttonStyling{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonStyling>button{
+    margin-top: 10px;
+    text-decoration: none;
+    border: 0px;
+    padding: 7px;
+    background-color: rgb(105, 191, 105);
+    border-radius: 4px;
+}
+

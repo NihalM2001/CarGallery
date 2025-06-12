@@ -1,0 +1,85 @@
+.landingPageContainer{
+    background-image: url("../assets/homeImage.jpg");
+    height: 100dvh;
+    background-size: cover;
+    filter: grayscale(.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.landingPageContainer>*
+{
+    color: white;
+    position: relative;
+    top: -40px;
+}
+
+.landingHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    color: rgb(239, 1,1);
+}
+
+.landingHeader>h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6em;
+}
+
+.landingHeader>p{
+    font-size: 2.2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* .landingHeader>button{
+    text-decoration: none;
+    border: 0px;
+    padding: 7px;
+    border-radius: 4px;
+    background: linear-gradient(to right, rgb(230, 13, 13),rgb(46, 19, 19));
+    color: wheat;
+}
+
+.landingHeader>button:hover{
+    scale: 1.05;
+    transition: 200ms;
+    background: linear-gradient(to right,rgb(46, 19, 19), rgb(230, 13, 13));
+} */
+
+/*tesing tranition in button below this. Do NOT alter the above code.*/
+
+/* Testing done. B elow code works properly. No issue at all */
+
+.landingHeader>button{
+    text-decoration: none;
+    border: 0px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    color: wheat;
+
+    position: relative;
+    background: linear-gradient(to right, rgb(230, 13, 13),rgb(144, 28, 28),rgb(46, 19, 19));
+    z-index: 1;
+
+}
+
+.landingHeader>button::before{
+    content: "Open Garage";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,rgb(46, 19, 19), rgb(144, 28, 28), rgb(230, 13, 13));
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingHeader>button:hover::before{
+    /* background: linear-gradient(to right,rgb(46, 19, 19), rgb(230, 13, 13)); */
+    opacity: 1;
+}

@@ -1,0 +1,38 @@
+package org.carGallery.Controller;
+
+import java.util.List;
+
+import org.carGallery.Entity.CarDetails;
+import org.carGallery.Service.CarService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CarController {
+	@Autowired
+	CarService carSer;
+	
+	@PostMapping("/saveCar")
+	@CrossOrigin(origins = "http://localhost:5173")
+	public CarDetails saveCar(@RequestBody CarDetails carDet) {
+		return carSer.saveCar(carDet); 
+	}
+	
+	@GetMapping("/deleteCar/{id}")
+	@CrossOrigin(origins = "http://localhost:5173")
+	public void deleteCar(@PathVariable("id") int id) {
+		carSer.deleteCar(id);
+	}
+	
+	@GetMapping("/listCar")
+	@CrossOrigin(origins = "http://localhost:5173")
+	public List<CarDetails> listCars(){
+		return carSer.listCars();
+	}
+	
+}
