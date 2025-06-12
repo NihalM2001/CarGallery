@@ -6,10 +6,10 @@ const ViewGarage = () => {
 
   const [carDetails, setCarDetails] = useState([]);
 
-
+// USE localhost:8080 when locally testing the application
   const fetchCarData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/listCar")
+      const response = await axios.get("https://cargallery.onrender.com/listCar")
         .then(response => {
           setCarDetails(response.data);
         })
@@ -25,7 +25,7 @@ const ViewGarage = () => {
   const onButtonClick = async (sNo) => {
     console.log(sNo);
     try {
-      const redirect = await axios.get(`http://localhost:8080/deleteCar/${sNo}`)
+      const redirect = await axios.get(`https://cargallery.onrender.com/deleteCar/${sNo}`)
       if (redirect.status === 200) {
         alert("Car deleted Successfully");
         fetchCarData();

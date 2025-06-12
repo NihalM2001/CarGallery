@@ -24,7 +24,7 @@ const AddCar = () => {
     }
 
       try{
-        const response = await axios.post("http://localhost:8080/saveCar",formData);
+        const response = await axios.post("https://cargallery.onrender.com/saveCar",formData);
         
         console.log(response);
         console.log("Form submitted");
