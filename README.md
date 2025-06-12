@@ -1,1 +1,1 @@
-# CarGallery
+A personalized car gallery where users can add, view, and manage their dream car collection.
