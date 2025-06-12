@@ -18,19 +18,19 @@ public class CarController {
 	CarService carSer;
 	
 	@PostMapping("/saveCar")
-	@CrossOrigin(origins = "http://localhost:5173")
+	@CrossOrigin(origins = "https://cerulean-melomakarona-1d65e2.netlify.app")
 	public CarDetails saveCar(@RequestBody CarDetails carDet) {
 		return carSer.saveCar(carDet); 
 	}
 	
 	@GetMapping("/deleteCar/{id}")
-	@CrossOrigin(origins = "http://localhost:5173")
+	@CrossOrigin(origins = "https://cerulean-melomakarona-1d65e2.netlify.app")
 	public void deleteCar(@PathVariable("id") int id) {
 		carSer.deleteCar(id);
 	}
 	
 	@GetMapping("/listCar")
-	@CrossOrigin(origins = "http://localhost:5173")
+	@CrossOrigin(origins = "https://cerulean-melomakarona-1d65e2.netlify.app")
 	public List<CarDetails> listCars(){
 		return carSer.listCars();
 	}

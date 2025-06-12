@@ -21,7 +21,7 @@ public class UserController {
 	}
 	
 	@PostMapping("/saveUser")
-	@CrossOrigin(origins = "http://localhost:5173")
+	@CrossOrigin(origins = "https://cerulean-melomakarona-1d65e2.netlify.app")
 	public UserDetails saveUser(@RequestBody UserDetails userDet ) {
 		return service.addUser(userDet);
 	}
